@@ -5,17 +5,13 @@ public class BatchUtils {
         if (value == null)
             return null;
 
-        switch (dataType.toLowerCase().replaceFirst("\\(.*\\)","")) {
-            case "varchar":
-            case "char":
-                return getString(value.replaceAll("'", "''"));
-            case "date":
-            case "datetime":
-            case "time":
-                return getString(value);
-            default:
-                return value;
-        }
+        String lowerCaseDataType = dataType.toLowerCase();
+
+        if (lowerCaseDataType.matches(".*char.*"))
+            return getString(value.replaceAll("'", "''"));
+        if (lowerCaseDataType.matches(".*time.*|.*date.*"))
+            return getString(value);
+        return value;
     }
 
     private static String getString(String value) {

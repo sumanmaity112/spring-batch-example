@@ -1,0 +1,4 @@
+INSERT INTO person (person_id, gender, birthdate, birthdate_estimated, dead, death_date, cause_of_death, creator, changed_by, date_changed, voided, voided_by, date_voided, void_reason, deathdate_estimated, birthtime)
+VALUES (1, 'M', NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, 0, NULL);
+INSERT INTO person (person_id, gender, birthdate, birthdate_estimated, dead, death_date, cause_of_death, creator, changed_by, date_changed, voided, voided_by, date_voided, void_reason, deathdate_estimated, birthtime)
+VALUES (2, 'F', NULL, 0, 0, NULL, NULL, 1, NULL, NULL, 0, NULL, NULL, NULL, 0, NULL);
